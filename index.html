@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 30px;
+        }
+        thead {
+            background-color: rgb(185, 185, 250);
+        }
+        tbody {
+            background-color: rgb(227, 227, 253);
+        }
+
+        #population {
+            margin-top: 15px;
+            border: 1px solid black;
+            width: 100%;
+        }
+
+        h3 {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        table tr {
+            border: 1px solid black;
+        }
+
+        .srl,
+        .srl-txt {
+            width: 10%;
+            padding-left: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 20px; 
+        }
+
+        .txt-mid,
+        .txt-right,
+        .dst,
+        .txt-dist {
+            width: 30%;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="population">
+        <h3>Maharashtra District-wise Population</h3>
+        <input id="myInput" type="text" placeholder="Search Here" onkeyup="seartchDst()">
+        <thead>
+            <tr>
+                <th class="srl">S.No.</th>
+                <th class="dst">District Name</th>
+                <th class="txt-mid">As per 2011 census </th>
+                <th class="txt-right">Estimated Population in 2022 </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="srl-txt">1.</td>
+                <td class="txt-dist">Ahmadnagar </td>
+                <td class="txt-right">4,543,159</div>
+                </td>
+                <td class="txt-right">5,049,721</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">2.</td>
+                <td class="txt-dist">Akola </td>
+                <td class="txt-right">1,813,906</div>
+                </td>
+                <td class="txt-right">2,016,157</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">3.</td>
+                <td class="txt-dist">Amravati </td>
+                <td class="txt-right">2,888,445</div>
+                </td>
+                <td class="txt-right">3,210,507</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">4.</td>
+                <td class="txt-dist">Aurangabad </td>
+                <td class="txt-right">3,701,282</div>
+                </td>
+                <td class="txt-right">4,113,975</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">5.</td>
+                <td class="txt-dist">Beed </td>
+                <td class="txt-right">2,585,049</div>
+                </td>
+                <td class="txt-right">2,873,282</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">6.</td>
+                <td class="txt-dist">Bhandara </td>
+                <td class="txt-right">1,200,334</div>
+                </td>
+                <td class="txt-right">1,334,171</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">7.</td>
+                <td class="txt-dist">Buldana </td>
+                <td class="txt-right">2,586,258</div>
+                </td>
+                <td class="txt-right">2,874,626</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">8.</td>
+                <td class="txt-dist">Chandrapur </td>
+                <td class="txt-right">2,204,307</div>
+                </td>
+                <td class="txt-right">2,450,087</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">9.</td>
+                <td class="txt-dist">Dhule </td>
+                <td class="txt-right">2,050,862</div>
+                </td>
+                <td class="txt-right">2,279,533</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">10.</td>
+                <td class="txt-dist">Gadchiroli </td>
+                <td class="txt-right">1,072,942</div>
+                </td>
+                <td class="txt-right">1,192,575</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">11.</td>
+                <td class="txt-dist">Gondiya </td>
+                <td class="txt-right">1,322,507</div>
+                </td>
+                <td class="txt-right">1,469,967</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">12.</td>
+                <td class="txt-dist">Hingoli </td>
+                <td class="txt-right">1,177,345</div>
+                </td>
+                <td class="txt-right">1,308,619</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">13.</td>
+                <td class="txt-dist">Jalgaon </td>
+                <td class="txt-right">4,229,917</div>
+                </td>
+                <td class="txt-right">4,701,553</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">14.</td>
+                <td class="txt-dist">Jalna </td>
+                <td class="txt-right">1,959,046</div>
+                </td>
+                <td class="txt-right">2,177,480</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">15.</td>
+                <td class="txt-dist">Kolhapur </td>
+                <td class="txt-right">3,876,001</div>
+                </td>
+                <td class="txt-right">4,308,175</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">16.</td>
+                <td class="txt-dist">Latur </td>
+                <td class="txt-right">2,454,196</div>
+                </td>
+                <td class="txt-right">2,727,839</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">17.</td>
+                <td class="txt-dist">Mumbai City </td>
+                <td class="txt-right">3,085,411</div>
+                </td>
+                <td class="txt-right">3,429,434</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">18.</td>
+                <td class="txt-dist">Mumbai Suburban </td>
+                <td class="txt-right">9,356,962</div>
+                </td>
+                <td class="txt-right">10,400,263</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">19.</td>
+                <td class="txt-dist">Nagpur </td>
+                <td class="txt-right">4,653,570</div>
+                </td>
+                <td class="txt-right">5,172,443</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">20.</td>
+                <td class="txt-dist">Nanded </td>
+                <td class="txt-right">3,361,292</div>
+                </td>
+                <td class="txt-right">3,736,076</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">21.</td>
+                <td class="txt-dist">Nandurbar </td>
+                <td class="txt-right">1,648,295</div>
+                </td>
+                <td class="txt-right">1,832,080</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">22.</td>
+                <td class="txt-dist">Nashik </td>
+                <td class="txt-right">6,107,187</div>
+                </td>
+                <td class="txt-right">6,788,138</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">23.</td>
+                <td class="txt-dist">Osmanabad </td>
+                <td class="txt-right">1,657,576</div>
+                </td>
+                <td class="txt-right">1,842,396</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">24.</td>
+                <td class="txt-dist">Parbhani </td>
+                <td class="txt-right">1,836,086</div>
+                </td>
+                <td class="txt-right">2,040,810</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">25.</td>
+                <td class="txt-dist">Pune </td>
+                <td class="txt-right">9,429,408</div>
+                </td>
+                <td class="txt-right">10,480,787</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">26.</td>
+                <td class="txt-dist">Raigad </td>
+                <td class="txt-right">2,634,200</div>
+                </td>
+                <td class="txt-right">2,927,913</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">27.</td>
+                <td class="txt-dist">Ratnagiri </td>
+                <td class="txt-right">1,615,069</div>
+                </td>
+                <td class="txt-right">1,795,149</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">28.</td>
+                <td class="txt-dist">Sangli </td>
+                <td class="txt-right">2,822,143</div>
+                </td>
+                <td class="txt-right">3,136,812</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">29.</td>
+                <td class="txt-dist">Satara </td>
+                <td class="txt-right">3,003,741</div>
+                </td>
+                <td class="txt-right">3,338,658</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">30.</td>
+                <td class="txt-dist">Sindhudurg </td>
+                <td class="txt-right">849,651</div>
+                </td>
+                <td class="txt-right">944,387</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">31.</td>
+                <td class="txt-dist">Solapur </td>
+                <td class="txt-right">4,317,756</div>
+                </td>
+                <td class="txt-right">4,799,186</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">32.</td>
+                <td class="txt-dist">Thane </td>
+                <td class="txt-right">11,060,148</div>
+                </td>
+                <td class="txt-right">12,293,355</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">33.</td>
+                <td class="txt-dist">Wardha </td>
+                <td class="txt-right">1,300,774</div>
+                </td>
+                <td class="txt-right">1,445,810</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">34.</td>
+                <td class="txt-dist">Washim </td>
+                <td class="txt-right">1,197,160</div>
+                </td>
+                <td class="txt-right">1,330,643</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="srl-txt">35.</td>
+                <td class="txt-dist">Yavatmal </td>
+                <td class="txt-right">2,772,348</div>
+                </td>
+                <td class="txt-right">3,081,465</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const seartchDst = () => {
+            console.log("hello");
+            let myInput = document.getElementById('myInput').value.toUpperCase();
+            let filter = document.getElementById('population')
+            let tr = filter.getElementsByTagName('tr');
+            for (let i = 0; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName('td')[1];
+                if (td) {
+                    let textValue = td.textContent || td.innerHTML;
+                    if (textValue.toUpperCase().indexOf(myInput) > -1) {
+                        tr[i].style.display = "";
+                    }
+                    else{
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
